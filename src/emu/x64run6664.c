@@ -28,11 +28,11 @@ uintptr_t Test6664(x64test_t *test, rex_t rex, int seg, uintptr_t addr)
 uintptr_t Run6664(x64emu_t *emu, rex_t rex, int seg, uintptr_t addr)
 #endif
 {
-    uint8_t opcode;
-    uint8_t nextop;
-    uint16_t tmp16u;
-    int16_t tmp16s;
-    uint64_t tmp64u;
+    uint8_t opcode = 0; // initialize with a default value
+    uint8_t nextop = 0;
+    uint16_t tmp16u = 0;
+    int16_t tmp16s = 0;
+    uint64_t tmp64u = 0;
     reg64_t *oped, *opgd;
     sse_regs_t *opex, *opgx;
     #ifdef TEST_INTERPRETER
